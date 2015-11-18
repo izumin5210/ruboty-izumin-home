@@ -26,10 +26,15 @@ GEM
       activesupport
       chrono
       ruboty (>= 0.2.0)
+    ruboty-slack (0.1.12)
+      ruboty (>= 1.0.4)
+      xrc (>= 0.1.8)
     slop (4.2.0)
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    xrc (0.1.8)
+      activesupport
 
 PLATFORMS
   ruby
@@ -38,3 +43,4 @@ DEPENDENCIES
   ruboty
   ruboty-alias
   ruboty-cron
+  ruboty-slack
