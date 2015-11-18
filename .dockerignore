@@ -1,0 +1,9 @@
+/spec/
+/test/
+/.bundle/
+/vendor/bundle/
+/.git/
+.gitignore
+README.md
+LICENSE.md
+
