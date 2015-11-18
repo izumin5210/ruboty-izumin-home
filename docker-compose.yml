@@ -1,0 +1,14 @@
+ruboty:
+  build: .
+  links:
+    - redis:redis
+  environment:
+    REDIS_URL: REDIS_PORT
+  command: ruboty --dotenv
+redis:
+  image: hypriot/rpi-redis
+  ports:
+    - 6379:6379
+  volumes:
+    - /srv/docker/redis:/var/lib/redis
+  restart: always
