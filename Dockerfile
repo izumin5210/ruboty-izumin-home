@@ -1,7 +1,7 @@
 FROM hypriot/rpi-ruby
 MAINTAINER izumin5210 <masayuki@izumin.info>
 
-RUN apt-get update
+RUN apt-get update \
     && apt-get -y --no-install-recommends install gcc make
 
 ENV PROJECT /ruboty
