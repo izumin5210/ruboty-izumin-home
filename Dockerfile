@@ -15,4 +15,4 @@ RUN bundle install
 
 ADD . $PROJECT
 
-CMD ruboty
+CMD ["ruboty", "--dotenv"]
