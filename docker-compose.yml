@@ -1,9 +1,7 @@
 ruboty:
   build: .
   links:
-    - redis:redis
-  environment:
-    REDIS_URL: REDIS_PORT
+    - redis
   command: ruboty --dotenv
 redis:
   image: hypriot/rpi-redis
