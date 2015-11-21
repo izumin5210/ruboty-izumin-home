@@ -2,7 +2,7 @@ ruboty:
   build: .
   links:
     - redis
-  command: ruboty --dotenv
+  command: ruboty --dotenv --load ./lib/ruboty/trello_reporter.rb
 redis:
   image: hypriot/rpi-redis
   ports:
