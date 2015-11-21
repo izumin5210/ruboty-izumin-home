@@ -5,7 +5,11 @@ module Ruboty
         def call
           grouped_cards = cards.inject(Hash.new { |h, k| h[k] = [] }) do |grouped, card|
                 card.labels.each do |label|
-                  grouped[label.name] << card.name
+                  if card.due.nil?
+                    grouped[label.name] << card.name
+                  else
+                    grouped[label.name] << "#{card.name} (~ #{card.due.strftime("%-m/%-d %H:%M")})"
+                  end
                 end
                 grouped
               end
