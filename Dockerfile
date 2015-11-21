@@ -2,7 +2,7 @@ FROM hypriot/rpi-ruby
 MAINTAINER izumin5210 <masayuki@izumin.info>
 
 RUN apt-get update \
-    && apt-get -y --no-install-recommends install gcc make
+    && apt-get -y --no-install-recommends install gcc g++ make
 
 ENV PROJECT /ruboty
 RUN mkdir $PROJECT
