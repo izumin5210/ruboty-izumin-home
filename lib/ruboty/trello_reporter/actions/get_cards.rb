@@ -10,6 +10,8 @@ module Ruboty
                 grouped
               end
           message.reply(grouped_cards.map { |l, cs| "#{l}\n#{cs.map { |c| "* #{c}" }.join("\n")}" }.join("\n\n"))
+        rescue Trello::Error => e
+          message.reply(e.message)
         end
       end
     end
