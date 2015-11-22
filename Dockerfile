@@ -5,7 +5,7 @@ RUN apt-get update \
     && apt-get -y --no-install-recommends install gcc g++ make
 
 RUN echo "Asia/Tokyo" > /etc/timezone
-RUN dpkg-reconfgure -f noninteractive tzdata
+RUN dpkg-reconfigure -f noninteractive tzdata
 
 ENV PROJECT /ruboty
 RUN mkdir $PROJECT
