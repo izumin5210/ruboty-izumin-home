@@ -3,6 +3,7 @@ ruboty:
   links:
     - redis
   command: ruboty --dotenv --load ./lib/ruboty/trello_reporter.rb
+
 redis:
   image: hypriot/rpi-redis
   ports:
@@ -10,3 +11,22 @@ redis:
   volumes:
     - /srv/docker/redis:/data
   restart: always
+
+fluentd:
+  build: ./fluentd
+  links:
+    - elasticsearch
+  ports:
+    - 22422:22422
+
+elasticsearch:
+  image: elasticsearch
+  expose:
+    - 9200
+
+kibana:
+  image: kibana
+  links:
+    - elasticsearch
+  ports:
+    - 5601:5601
